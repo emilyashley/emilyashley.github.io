@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "leaflet.js canvas"
+date:   2015-11-18 13:32:55 -0600
+categories: dohickie
+---
+{% include leaflet/mapbox-streets.html view="[ 29.995, -90], 12" %}
