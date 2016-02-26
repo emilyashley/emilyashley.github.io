@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "random bar heights"
+date:   2016-02-12 13:59:55 -0600
+categories: dohickie
+---
+<style>
+    div.bar { /*put shared styles into a class called 'bar'*/
+        display: inline-block;
+        width: 20px;
+        height: 75px;   /* We'll override this later */
+        margin-right: 2px;
+    }
+</style>
+<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script>
+
+    /*BAR CHARTS*/
+    var randoData = [];                        //Initialize empty array
+    var color= ["red", "orange", "yellow", "green", "blue", "indigo", "purple", "pink", "#fff", "#e5e5e5", "#ccc","#b2b2b2","#999", "#7f7f7f", "#666", "#4c4c4c", "#333", "#191919", "#000"]
+
+    for (var i = 0; i < 19; i++) {           //Loop 25 times
+        var newNumber = Math.random() * 30;  //New random number (0-30)
+        randoData = randoData.concat(newNumber); //Add new number to array
+        }
+
+    d3.select(".post-content").selectAll("div")
+        .data(randoData)
+        .enter()
+        .append("div")
+        .attr("class", "bar")
+        .style("height", function(d) {
+            var barHeight = d * 5;
+            return barHeight + "px";
+        })
+        .style("background-color",function(d,i){
+            return color[i]
+        });
+</script>
+<input type="button" value="random" onClick="window.location.href=window.location.href">

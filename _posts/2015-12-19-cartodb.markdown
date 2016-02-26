@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "cartodb.js canvas"
+date:   2015-12-19 13:32:55 -0600
+categories: dohickie
+---
+
+{% include cartodb/toner.html center="29.995, -90" zoom="8"%}

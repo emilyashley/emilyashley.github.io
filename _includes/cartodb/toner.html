@@ -1,0 +1,16 @@
+<div id="map"></div>
+  <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+  <script>
+
+      var options = {
+        center: [{{include.center}}], // New Orleans
+        zoom: {{include.zoom}}
+      }
+      var map_object = new L.Map('map', options);
+
+      L.tileLayer('http://tile.stamen.com/toner/{z}/{x}/{y}.png', {
+        attribution: 'Stamen'
+      }).addTo(map_object);
+
+
+  </script>
