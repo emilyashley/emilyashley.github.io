@@ -1,20 +1,20 @@
 ---
 layout: post
 title:  "TIL: Tricks with Logical Operators"
-date:   2016-03-03 10:01:36 -0600
+date:   2016-03-02 10:01:36 -0600
 categories: post
 ---
 
-  &nbsp;  &nbsp;**Today I learned...**
+  &nbsp;**Today I learned...**
 
-  &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp; **logical operators (&&, &#124; &#124; ) return the _value_ of one of their operands.**
+  &nbsp; &nbsp; **logical operators (&&, &#124; &#124; ) return the _value_ of one of their operands.**
 
 
 
 Most often, I've seen logical operators used in conjunction with relational expressions to control the flow of program execution in `if` , `while`, and `for` statements, like so:
 
 ```javascript
-if ( length > 0 && status === false){
+if ( length > 0 && status === false ){
  return somethingCool;
  }
 ```
@@ -22,8 +22,9 @@ if ( length > 0 && status === false){
 Relational operators ( like == , <, and >) test for a given relationship between two values, and return `true` or `false` depending on whether that relationship exists. The AND operator (`&&`) returns `true` if and only if both it's first _and_ it's second operand are `true`. The OR operator (`||`), on the other hand, returns `true` if _one or both_ operands is `true`.  It returns `false` only if both operands are `false`.  
 
 
-While often used together, this `true`/`false` return dichotomy is passed in through the relational operator and is not actually the prescribed return values of the `&&` and `||` logical operators.
-Turns out, logical operators return the _value_ of one of their operands. If these operands are non-boolean values a non-boolean value will be returned. Surprise! But how do logical operators get evaluated if not with booleans? JavaScript utilizes type coercion to evaluate the operands within a boolean context. It considers them either "truthy" or "falsy". If this is unfamiliar, reference this type conversion [refresher](http://www.w3schools.com/js/js_type_conversion.asp). 
+Today I learned, this strictly `true` or `false` return options seen in logical statements like those above are a byproduct of  relational operator expression behavior. Surprise! The boolean nature of these returns are unrelated to `&&` and `||`. Oh anti-patterns, how you tease me so.
+
+Turns out, logical operators return the _value_ of one of their operands. That's where these `true` and `false`s have been coming from. The operands. If the logical operands are non-boolean values a non-boolean value will be returned. But wait... how do our logical operators evaluate if not with booleans? JavaScript utilizes type coercion to evaluate the operands within a boolean context. It considers them either "truthy" or "falsy". If this is unfamiliar, reference this type conversion [refresher](http://www.w3schools.com/js/js_type_conversion.asp). 
 
 Check it:
 
@@ -32,7 +33,7 @@ foo = false || true; //returns true
 bar = 3 || 5; //returns 3
 ```
 
-You know what this means? We can use logical operators for conditional variable assignment. Remember, `undefined`'s are falsy, so this is handy for not overwriting existing values.
+We could use logical operators for conditional variable assignment. Remember, `undefined`'s are falsy, so this could be handy way to not overwrite existing values. (Note: this can backfire in cases where the variable is another falsy value. Try it! Combine different logical operators to guard against this unwanted outcome)
 
 ```javascript
 foo = foo || 1; //returns 1 if foo is falsy
@@ -42,7 +43,7 @@ Or we could even chain them together.
 
 ```javascript
 var smarty = 0;
-var pants = undefined;
+var pants = "dance";
 var foo = smarty || pants && "bar";
 //returns "bar"
 ```
@@ -55,7 +56,7 @@ function guard(item, callback) {
     callback(item); 
 }
 ```
-But which value can we expect to return from a chain? Let's dig a little deeper; logical operators return their _last touched_ operand. That's either the expression that terminated the evaluation, or the last expression in the evaluation chain. To anticipate and employ this behavior, we must understand how logical evaluation differs between && and ||.
+That's cool and all, but which value can we expect to return from a chain? Let us dig a little deeper. Logical operators return their _last touched_ operand and use a process called logical short-circuiting to prevent unecessary evaluation. To do this, the second operand is evaluated *only* when the result is not fully determined by the first operand. Our operators will either return the expression that terminated the evaluation, or the last expression in the evaluation chain. To anticipate and employ this behavior, we must understand how logical evaluation differs between `&&` and `||`.
 
 # &&
 
@@ -73,7 +74,7 @@ However, if the left value is truthy, `&&` returns the value on the right regard
 3 && null; // returns null
 ```
 
-# OR
+# ||
 
 The ```||``` also begins evaluation with the expression on it's left. If the value is truthy, it stops and returns. We gathered all the information we needed, the entire expression is now true. If lefty is a falsy value, `||` returns the operand to the right. The value of this operand accurately represents the expression's overall evaluation. 
 
@@ -82,7 +83,7 @@ The ```||``` also begins evaluation with the expression on it's left. If the val
 0 || null || "bar" || undefined; // returns "bar"
 ```
 
-Here's the kicker. When used to control the flow of program execution, values are coerced to boolean for evaluation and typically* result in the expected flow. (*Looking at you, `String` `"false"`, you trickster!)  That's why the nuances of logical operators have gone unnoticed til now in my code. I hadn't yet thought to take advantage of their `return` values for something more than its "truthiness".
+Here's the kicker. When used to control the flow of program execution, values are coerced to boolean for evaluation and typically* result in the expected flow. (*Looking at you, truthy `"false"`, you trickster!)  That's why the nuances of logical operators have gone unnoticed til now in my code. I hadn't yet thought to take advantage of their `return` values for something more than its "truthiness".
 
 Silly me.
 
@@ -151,9 +152,11 @@ And remember,
 
 ### TL;DR:
 * logical operators return the value of their _last touched_ operand
-  * `&&`'s terminate with the first falsy value encountered
-  * `||`'s terminate with the first truthy value encountered
-  * `||`'s continue evaluating falsy values until they run out of values
+  * `&&` terminates with the first falsy value encountered
+  * `&&` continues evaluating truthy values until it runs out of values
+  
+  * `||` terminates with the first truthy value encountered
+  * `||` continues evaluating falsy values until it runs out of values
 * using logical operators to [short-circuit evaluate](https://en.wikipedia.org/wiki/Short-circuit_evaluation) conditions is a common, but alternative approach to statement branching.
 
 
