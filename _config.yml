@@ -18,5 +18,8 @@ twitter_username: youknowemily
 github_username:  emilyashley
 future: true
 
+gems:
+  - jemoji
+
 # Build settings
 markdown: kramdown
