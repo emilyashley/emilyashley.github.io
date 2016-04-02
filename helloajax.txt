@@ -1,0 +1,2 @@
+<p>Hello World</p>
+<p>I'm AJAX. I like fast, dynamic web pages.</p>
