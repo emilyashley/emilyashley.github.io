@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>emily ashley</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 18 Sep 2019 09:56:06 -0500</pubDate>
+    <lastBuildDate>Wed, 18 Sep 2019 09:56:06 -0500</lastBuildDate>
+    <generator>Jekyll v4.0.0</generator>
+    
+      <item>
+        <title>Stacks and Queues in Plain Language</title>
+        <description>&lt;h1 id=&quot;now-with-more-talking-emoji-thanks-jemoji&quot;&gt;Now with more talking emoji! Thanks, &lt;a href=&quot;https://rubygems.org/gems/jemoji&quot;&gt;jemoji&lt;/a&gt;!&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:monkey_face: : &lt;em&gt;Hey, Sam, what’s a stack?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:alien: : A stack is a limited access data structure where objects can only be inserted and removed from the top.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:hear_no_evil: : &lt;em&gt;Wait. Hold up, whaddoyamean the top? I didn’t even know we had a top!&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:alien: : Uh-huh! That’s part of a stack’s structure. Here, let’s start with the basics…&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A stack is made up of two parts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the “top”&lt;/li&gt;
+  &lt;li&gt;the “rest”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can interact with it in two* ways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;add item to top&lt;/li&gt;
+  &lt;li&gt;remove item from top.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These methods and properties are what make it a limited access data structure. Our interaction with the structure is only with the top-most element, we never interact with the ‘rest.’ One often used analogy is a stack of books or plates because you can remove and add only from the top. But I grab plates and books from the middle all the time. &lt;em&gt;Rebellion! Favorites!&lt;/em&gt; A more relatable example would be books on your desk &lt;strong&gt;in the dark.&lt;/strong&gt; Let’s say you’re on you’re way out the door in a hurry. You’re gonna grab the one on top because it’s probably the last one you set there, right? Plus, it’s dark so you can’t even &lt;em&gt;see&lt;/em&gt; the rest. Now &lt;em&gt;that’s&lt;/em&gt; a stack. This is why stacks are often explained as Last In First Out.&lt;/p&gt;
+
+&lt;p&gt;But, why on earth would we want to model a data structure after grabbing for books in the dark? You got me. Fear not, I also got you. But first, let’s take a look at Queues.&lt;/p&gt;
+
+&lt;p&gt;A queue is made of two parts:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;front&lt;/li&gt;
+  &lt;li&gt;back&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can interact with it in two ways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;insert an item into the back&lt;/li&gt;
+  &lt;li&gt;remove the front item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We call these methods enqueue and dequeue, respectively. Sounding familiar yet? No? What about a ticket line at a theater? It’s first come, first served. Or as a queue would say, First In First Out. The difference between stacks and queues is in removing. In a stack we remove the most recently added item; in a queue, we remove the item that’s been there the longest.&lt;/p&gt;
+
+&lt;p&gt;Do you feel pretty comfortable with the concept of a queue? You might. It’s part of our social structure. We’ve found it to be a pretty efficient, systematic way to organize ourselves and our social processes. And, as a friend recently told me, “the more we’ve encountered something that can be modeled with a structure, the more familiar the structure will feel.”&lt;/p&gt;
+
+&lt;p&gt;A few examples:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;That back button on your browser? Stack. The undo button? Same.&lt;/li&gt;
+  &lt;li&gt;Playing Rummy. That discard pile? Totally a stack.&lt;/li&gt;
+  &lt;li&gt;Boarding an airplane? Queue.&lt;/li&gt;
+  &lt;li&gt;Shipping containers on a boat? Boxes under your bed? Stacks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:monkey_face: : &lt;em&gt;How about cartons of milk in the fridge?&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:alien: : Should be a queue.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:monkey_face: : Why?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:alien: : You finish the oldest one first or toss it out if it’s expired. When you bring new milk home you put the newest ones in the back. If your fridge is operated like a stack, you’re doing it wrong.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:speak_no_evil: : …&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:monkey_face: : Line at the department store? That’s a queue, right?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:alien: : You got it, but what if there’s an erratic customer? Then it’s a &lt;strong&gt;priority queue&lt;/strong&gt; and their request is elevated while the rest of the queue waits.Customer service, you are &lt;em&gt;so&lt;/em&gt; backwards.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Back to stacks. I told you not to fear. Why on earth would we want to model a data structure last in first out? It’s not all grabbing books in the dark. Computers are really good with stacks. Why? Because of &lt;em&gt;processes&lt;/em&gt;. Stacks are a well-suited data structure for picking up where you left off.&lt;/p&gt;
+
+&lt;p&gt;Stacks are like books and plates, right? Ever set a dinner plate on top of a book you were reading? Of course not. You’re civilized. But &lt;em&gt;if you did&lt;/em&gt;, when you finished eating and removed your plate you could pick right back up reading where you left off. Cue the Call Stack! The call stack, or execution stack, keeps track of the point to which each active subroutine should &lt;em&gt;return control&lt;/em&gt; when it finishes executing. Right back on top. This is great for backtracking, recursion, nested function calls, and many other proccesses we ask of our computers. After eating remove the plate and finish reading. After reading, remove the book and find a half-finished drawing underneath. After coloring, remove the paper and find a newspaper underneath. And on and on. Your desk has now become a limited access data structure where objects can only be inserted and removed from the top. Check it:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; 
+&lt;span class=&quot;c1&quot;&gt;// Evaluate this arithmatic expression &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// before assigning it to x&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:alien: : That’s the call stack in action.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:monkey_face: : :bulb:&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:alien: : &lt;em&gt;Plus, pallindromes and stacks… totally best friends.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:monkey_face: : Hey, Sam. All of these examples are existing structures, some with physical limitations. How do you know when to use stacks or queues &lt;strong&gt;in&lt;/strong&gt; your software?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:alien: : If you need stack, you know it. Otherwise use a queue.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:monkey_face::grey_question: …&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There are many factors to consider when creating or implementing a data structure. Stacks and queues are structures that help you deal with things coming at you at a faster speed than you can process them. Like with milk or your email, the significance of an expiration date or expected response time might change how we process our data. For example, if a new coffee house implemented their morning line as a stack that wouldn’t go over too well, would it? No. People have limited patience.&lt;/p&gt;
+
+&lt;p&gt;With a project, maybe you turn one thing into three more. Or maybe the user is click-click-clicking and now there’s a line of tasks to complete. Like at the theater, if you just need a place to put everyone because they are coming faster than you can sell tickets, use a queue.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If for some reason processing items in the same order is not what you want, use a stack.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This might be because in order to finish dealing with your current problem, you first need to take care of something else. Or you might need a return value from a newer task to complete the previous one - like the energy from dinner, a response from a newer email, or an evaluation of an expression. These are all good signifiers that you’ll want to use a stack.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;:monkey_face: :  &lt;strong&gt;If I need stack, I’ll know it. Otherwise use a queue.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Thu, 17 Mar 2016 11:01:36 -0500</pubDate>
+        <link>http://localhost:4000/post/2016/03/17/stacks-and-queues.html</link>
+        <guid isPermaLink="true">http://localhost:4000/post/2016/03/17/stacks-and-queues.html</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
+    
+      <item>
+        <title>TIL: Tricks with Logical Operators</title>
+        <description>&lt;p&gt; &lt;strong&gt;Today I learned…&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;    &lt;strong&gt;logical operators (&amp;amp;&amp;amp;, | | ) return the &lt;em&gt;value&lt;/em&gt; of one of their operands.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Most often, I’ve seen logical operators used in conjunction with relational expressions to control the flow of program execution in &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; , &lt;code class=&quot;highlighter-rouge&quot;&gt;while&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; statements, like so:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+ &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;somethingCool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+ &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Relational operators ( like == , &amp;lt;, and &amp;gt;) test for a given relationship between two values, and return &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; depending on whether that relationship exists. The AND operator (&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt;) returns &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; if and only if both it’s first &lt;em&gt;and&lt;/em&gt; it’s second operand are &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;. The OR operator (&lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt;), on the other hand, returns &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; if &lt;em&gt;one or both&lt;/em&gt; operands is &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt;.  It returns &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; only if both operands are &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Today I learned, this strictly &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt; return options seen in logical statements like those above are a byproduct of  relational operator expression behavior. Surprise! The boolean nature of these returns are unrelated to &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt;. Oh anti-patterns, how you tease me so.&lt;/p&gt;
+
+&lt;p&gt;Turns out, logical operators return the &lt;em&gt;value&lt;/em&gt; of one of their operands. That’s where these &lt;code class=&quot;highlighter-rouge&quot;&gt;true&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;false&lt;/code&gt;s have been coming from. The operands. If the logical operands are non-boolean values a non-boolean value will be returned. But wait… how do our logical operators evaluate if not with booleans? JavaScript utilizes type coercion to evaluate the operands within a boolean context. It considers them either “truthy” or “falsy”. If this is unfamiliar, reference this type conversion &lt;a href=&quot;http://www.w3schools.com/js/js_type_conversion.asp&quot;&gt;refresher&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Check it:&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//returns true&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//returns 3&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We could use logical operators for conditional variable assignment. Remember, &lt;code class=&quot;highlighter-rouge&quot;&gt;undefined&lt;/code&gt;’s are falsy, so this could be handy way to not overwrite existing values. (Note: this can backfire in cases where the variable is another falsy value. Try it! Combine different logical operators to guard against this unwanted outcome)&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//returns 1 if foo is falsy&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Or we could even chain them together.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;smarty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pants&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;dance&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;foo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;smarty&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;pants&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//returns &quot;bar&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Or use them to assign a default callback function object when the expected parameter is undefined&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;guard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;};&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;That’s cool and all, but which value can we expect to return from a chain? Let us dig a little deeper. Logical operators return their &lt;em&gt;last touched&lt;/em&gt; operand and use a process called logical short-circuiting to prevent unecessary evaluation. To do this, the second operand is evaluated &lt;em&gt;only&lt;/em&gt; when the result is not fully determined by the first operand. Our operators will either return the expression that terminated the evaluation, or the last expression in the evaluation chain. To anticipate and employ this behavior, we must understand how logical evaluation differs between &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1&gt;&amp;amp;&amp;amp;&lt;/h1&gt;
+
+&lt;p&gt;The &amp;amp;&amp;amp; operator begins by evaluating the expression on it’s left. It’s a test. &lt;em&gt;Are you truthy or falsy?&lt;/em&gt; 
+If this value is falsy, &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; stops and returns this value. We don’t even consider the value on the right. Why? Because it’s value won’t change the expression’s evaluation. If one is false, the whole thing is false.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// returns 0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;However, if the left value is truthy, &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; returns the value on the right regardless of it’s value. Why? Because it’s value &lt;em&gt;is&lt;/em&gt; the expression’s evaluation. It’s the deal maker/breaker. At this point, an evaluation isn’t needed to know this operand will accurately represent the expression’s overall evaluation, we can just send it right along.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// returns null&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;-1&quot;&gt;||&lt;/h1&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt; also begins evaluation with the expression on it’s left. If the value is truthy, it stops and returns. We gathered all the information we needed, the entire expression is now true. If lefty is a falsy value, &lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt; returns the operand to the right. The value of this operand accurately represents the expression’s overall evaluation.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// returns 3&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undefined&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// returns &quot;bar&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s the kicker. When used to control the flow of program execution, values are coerced to boolean for evaluation and typically* result in the expected flow. (*Looking at you, truthy &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;false&quot;&lt;/code&gt;, you trickster!)  That’s why the nuances of logical operators have gone unnoticed til now in my code. I hadn’t yet thought to take advantage of their &lt;code class=&quot;highlighter-rouge&quot;&gt;return&lt;/code&gt; values for something more than its “truthiness”.&lt;/p&gt;
+
+&lt;p&gt;Silly me.&lt;/p&gt;
+
+&lt;h2 id=&quot;inspiration&quot;&gt;Inspiration&lt;/h2&gt;
+
+&lt;p&gt;So what inspired this post? What opened my eyes? A brief ‘wtf’-to-“how coooool” moment running into this nifty tidbit from John Resig’s &lt;a href=&quot;http://ejohn.org/files/pretty.js&quot; title=&quot;source&quot;&gt;Pretty Date&lt;/a&gt; for displaying JavaScript dates in human-friendly formats.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;day_diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;just now&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;120&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1 minute ago&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3600&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; minutes ago&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7200&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1 hour ago&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;86400&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3600&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; hours ago&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;day_diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Yesterday&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;day_diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;day_diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; days ago&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;day_diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;31&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ceil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;day_diff&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; weeks ago&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Without understanding all the behaviors of logical operators, this code looks confusing. But with a more complete understanding of the JavaScript language, it’s a handsome shorthand for two dozen lines of nested conditional statements with half as many return values. Compare. Enjoy.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if (day_diff == 0){
+  if (diff &amp;lt; 60){
+    return &quot;just now&quot;;
+    }
+  else if (diff &amp;lt; 120){
+    return &quot;1 minute ago&quot;;
+  }
+  else if (diff &amp;lt; 3600){
+    return Math.floor( diff / 60 ) + &quot; minutes ago&quot;;
+  }
+  else if (diff &amp;lt; 7200){
+    return &quot;1 hour ago&quot;;
+  }
+  else if (diff &amp;lt; 86400){
+    return Math.floor( diff / 3600 ) + &quot; hours ago&quot;);
+  }
+}
+else if (day_diff == 1){
+  return &quot;Yesterday&quot;;
+} 
+else if (day_diff &amp;lt; 7){
+  return day_diff + &quot; days ago&quot;;
+} 
+else if (day_diff &amp;lt; 31){
+  return Math.ceil( day_diff / 7 ) + &quot; weeks ago&quot;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Pretty neat, huh? Now we know.&lt;/p&gt;
+
+&lt;p&gt;Thoughts to consider:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Err on the side of caution when using logical operators to execute conditional code. Similar to &lt;code class=&quot;highlighter-rouge&quot;&gt;if&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;switch&lt;/code&gt;, some variables and functions may never execute or initialize if type coercion or evaluation chains are misunderstood.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Consider the question of readibiliy. As with any shorthand, ask if is it safe to assume your readers are familiar with an idiomatic use of logical operators. In some audiences, a longer but more ‘spelled out’ approach may be more acceptable and accessible.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And remember,&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Despite the somewhat complex way that this operator actually works, it is most commonly used as a simple Boolean algebra operator that works on truthy and falsy values. - JavaScript, The Definitive Guide&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tldr&quot;&gt;TL;DR:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;logical operators return the value of their &lt;em&gt;last touched&lt;/em&gt; operand
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; terminates with the first falsy value encountered&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;&amp;amp;&lt;/code&gt; continues evaluating truthy values until it runs out of values&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt; terminates with the first truthy value encountered&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;||&lt;/code&gt; continues evaluating falsy values until it runs out of values&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;using logical operators to &lt;a href=&quot;https://en.wikipedia.org/wiki/Short-circuit_evaluation&quot;&gt;short-circuit evaluate&lt;/a&gt; conditions is a common, but alternative approach to statement branching.&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 02 Mar 2016 10:01:36 -0600</pubDate>
+        <link>http://localhost:4000/post/2016/03/02/til-logical-tricks.html</link>
+        <guid isPermaLink="true">http://localhost:4000/post/2016/03/02/til-logical-tricks.html</guid>
+        
+        
+        <category>post</category>
+        
+      </item>
+    
+  </channel>
+</rss>

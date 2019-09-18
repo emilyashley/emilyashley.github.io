@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Stacks and Queues in Plain Language</title>
+
+   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+   <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+   
+    <style>
+        #map {
+            height: 500px;
+        }
+    </style>
+
+
+
+  
+  <meta name="description" content="Now with more talking emoji! Thanks, jemoji!">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/post/2016/03/17/stacks-and-queues.html">
+  <link rel="alternate" type="application/rss+xml" title="emily ashley" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">emily ashley</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">about</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Stacks and Queues in Plain Language</h1>
+    <p class="post-meta"><time datetime="2016-03-17T11:01:36-05:00" itemprop="datePublished">Mar 17, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h1 id="now-with-more-talking-emoji-thanks-jemoji">Now with more talking emoji! Thanks, <a href="https://rubygems.org/gems/jemoji">jemoji</a>!</h1>
+
+<blockquote>
+  <p>:monkey_face: : <em>Hey, Sam, what’s a stack?</em></p>
+</blockquote>
+
+<blockquote>
+  <p>:alien: : A stack is a limited access data structure where objects can only be inserted and removed from the top.</p>
+</blockquote>
+
+<blockquote>
+  <p>:hear_no_evil: : <em>Wait. Hold up, whaddoyamean the top? I didn’t even know we had a top!</em></p>
+</blockquote>
+
+<blockquote>
+  <p>:alien: : Uh-huh! That’s part of a stack’s structure. Here, let’s start with the basics…</p>
+</blockquote>
+
+<p>A stack is made up of two parts:</p>
+
+<ul>
+  <li>the “top”</li>
+  <li>the “rest”</li>
+</ul>
+
+<p>You can interact with it in two* ways:</p>
+
+<ul>
+  <li>add item to top</li>
+  <li>remove item from top.</li>
+</ul>
+
+<p>These methods and properties are what make it a limited access data structure. Our interaction with the structure is only with the top-most element, we never interact with the ‘rest.’ One often used analogy is a stack of books or plates because you can remove and add only from the top. But I grab plates and books from the middle all the time. <em>Rebellion! Favorites!</em> A more relatable example would be books on your desk <strong>in the dark.</strong> Let’s say you’re on you’re way out the door in a hurry. You’re gonna grab the one on top because it’s probably the last one you set there, right? Plus, it’s dark so you can’t even <em>see</em> the rest. Now <em>that’s</em> a stack. This is why stacks are often explained as Last In First Out.</p>
+
+<p>But, why on earth would we want to model a data structure after grabbing for books in the dark? You got me. Fear not, I also got you. But first, let’s take a look at Queues.</p>
+
+<p>A queue is made of two parts:</p>
+
+<ul>
+  <li>front</li>
+  <li>back</li>
+</ul>
+
+<p>You can interact with it in two ways:</p>
+
+<ul>
+  <li>insert an item into the back</li>
+  <li>remove the front item</li>
+</ul>
+
+<p>We call these methods enqueue and dequeue, respectively. Sounding familiar yet? No? What about a ticket line at a theater? It’s first come, first served. Or as a queue would say, First In First Out. The difference between stacks and queues is in removing. In a stack we remove the most recently added item; in a queue, we remove the item that’s been there the longest.</p>
+
+<p>Do you feel pretty comfortable with the concept of a queue? You might. It’s part of our social structure. We’ve found it to be a pretty efficient, systematic way to organize ourselves and our social processes. And, as a friend recently told me, “the more we’ve encountered something that can be modeled with a structure, the more familiar the structure will feel.”</p>
+
+<p>A few examples:</p>
+
+<ul>
+  <li>That back button on your browser? Stack. The undo button? Same.</li>
+  <li>Playing Rummy. That discard pile? Totally a stack.</li>
+  <li>Boarding an airplane? Queue.</li>
+  <li>Shipping containers on a boat? Boxes under your bed? Stacks.</li>
+</ul>
+
+<blockquote>
+  <p>:monkey_face: : <em>How about cartons of milk in the fridge?</em></p>
+</blockquote>
+
+<blockquote>
+  <p>:alien: : Should be a queue.</p>
+</blockquote>
+
+<blockquote>
+  <p>:monkey_face: : Why?</p>
+</blockquote>
+
+<blockquote>
+  <p>:alien: : You finish the oldest one first or toss it out if it’s expired. When you bring new milk home you put the newest ones in the back. If your fridge is operated like a stack, you’re doing it wrong.</p>
+</blockquote>
+
+<blockquote>
+  <p>:speak_no_evil: : …</p>
+</blockquote>
+
+<blockquote>
+  <p>:monkey_face: : Line at the department store? That’s a queue, right?</p>
+</blockquote>
+
+<blockquote>
+  <p>:alien: : You got it, but what if there’s an erratic customer? Then it’s a <strong>priority queue</strong> and their request is elevated while the rest of the queue waits.Customer service, you are <em>so</em> backwards.</p>
+</blockquote>
+
+<p>Back to stacks. I told you not to fear. Why on earth would we want to model a data structure last in first out? It’s not all grabbing books in the dark. Computers are really good with stacks. Why? Because of <em>processes</em>. Stacks are a well-suited data structure for picking up where you left off.</p>
+
+<p>Stacks are like books and plates, right? Ever set a dinner plate on top of a book you were reading? Of course not. You’re civilized. But <em>if you did</em>, when you finished eating and removed your plate you could pick right back up reading where you left off. Cue the Call Stack! The call stack, or execution stack, keeps track of the point to which each active subroutine should <em>return control</em> when it finishes executing. Right back on top. This is great for backtracking, recursion, nested function calls, and many other proccesses we ask of our computers. After eating remove the plate and finish reading. After reading, remove the book and find a half-finished drawing underneath. After coloring, remove the paper and find a newspaper underneath. And on and on. Your desk has now become a limited access data structure where objects can only be inserted and removed from the top. Check it:</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5</span> 
+<span class="c1">// Evaluate this arithmatic expression </span>
+<span class="c1">// before assigning it to x</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>:alien: : That’s the call stack in action.</p>
+</blockquote>
+
+<blockquote>
+  <p>:monkey_face: : :bulb:</p>
+</blockquote>
+
+<blockquote>
+  <p>:alien: : <em>Plus, pallindromes and stacks… totally best friends.</em></p>
+</blockquote>
+
+<blockquote>
+  <p>:monkey_face: : Hey, Sam. All of these examples are existing structures, some with physical limitations. How do you know when to use stacks or queues <strong>in</strong> your software?</p>
+</blockquote>
+
+<blockquote>
+  <p>:alien: : If you need stack, you know it. Otherwise use a queue.</p>
+</blockquote>
+
+<blockquote>
+  <p>:monkey_face::grey_question: …</p>
+</blockquote>
+
+<p>There are many factors to consider when creating or implementing a data structure. Stacks and queues are structures that help you deal with things coming at you at a faster speed than you can process them. Like with milk or your email, the significance of an expiration date or expected response time might change how we process our data. For example, if a new coffee house implemented their morning line as a stack that wouldn’t go over too well, would it? No. People have limited patience.</p>
+
+<p>With a project, maybe you turn one thing into three more. Or maybe the user is click-click-clicking and now there’s a line of tasks to complete. Like at the theater, if you just need a place to put everyone because they are coming faster than you can sell tickets, use a queue.</p>
+
+<p><em>If for some reason processing items in the same order is not what you want, use a stack.</em></p>
+
+<p>This might be because in order to finish dealing with your current problem, you first need to take care of something else. Or you might need a return value from a newer task to complete the previous one - like the energy from dinner, a response from a newer email, or an evaluation of an expression. These are all good signifiers that you’ll want to use a stack.</p>
+
+<blockquote>
+  <p>:monkey_face: :  <strong>If I need stack, I’ll know it. Otherwise use a queue.</strong></p>
+</blockquote>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/emilyashley"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">emilyashley</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
